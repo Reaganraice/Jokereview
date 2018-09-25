@@ -1,0 +1,56 @@
+
+.b{
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.contener{
+    border-radius: 10px;
+    height: 300px;
+    width: 400px;
+    background-color:#373F51;
+    margin-top: 30px;
+    margin-left: 35%;
+    padding-top: 200px;
+}
+body{
+    background-image: url(images/back.jpg);
+}
+ #log{
+    background-color:#E08E45;
+    margin :10px; 
+} 
+#out{
+    float: right;
+    background-color: bisque;
+    font-size: 30px;
+    border-radius:20%;
+}
+#back{
+    float: right;
+    background-color: bisque;
+    font-size: 30px;
+    border-radius:20%;
+}
+.fun{
+    text-align: center;
+    font-size: 50px;
+    background-color: #E08E45;
+}
+.mylog{
+    text-align: center;
+    font-size: 50px;
+    background-color: #373F51;
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
