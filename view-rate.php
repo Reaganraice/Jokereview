@@ -4,6 +4,8 @@
     $sql = "SELECT * FROM Jokes order by RAND() LIMIT 1";
     $result = mysqli_query($conn,$sql);
     if(isset($_POST['logout'])){
+        session_unset();
+        session_destroy();
         header('Location: index.php');
 
     }
@@ -23,23 +25,28 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <h1 class="fun">FunnyJokes</h1>
-    <?php
-    if($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            $rating = $row['rating'];
-            $id = $row['id'];
-            $totalrated =$row['totalrated'];
-            echo $row['setup']. "\n". $row['punchline'];
-        }
-    }
-    ?>
+    <p class="fun">FunnyJokes</h1>
     <form action="" method="POST">
-        <input type="submit" value="Funny" name = "funny" >
-        <input type="submit" value="Not Funny" name = "notfunny">
-        <button id="out" name= "logout">Log out</button>
-        <button id="back" name= "back">Back</button>
-    </form>
+        <div class="rate">
+            <h1> 
+                <?php
+                if($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        $rating = $row['rating'];
+                        $id = $row['id'];
+                        $totalrated =$row['totalrated'];
+                        echo $row['setup']. "\n". $row['punchline'];  
+                    }
+                }
+                ?>
+
+            </p>
+            <input type="submit" value="Funny" name = "funny" id="funny">
+            <input type="submit" value="Not Funny" name = "notfunny"id="notfun">
+        </div>
+            <button id="out" name= "logout">Log out</button>
+            <button id="back" name= "back">Back</button>
+   </form>
     <section>
         <form>
             
@@ -50,6 +57,10 @@
     <?php
     if(isset($_POST['funny'])){
         $sql= "UPDATE Jokes SET rating=$rating + 1,totalrated=$totalrated + 1 WHERE id= $id ";
+        $result= mysqli_query($conn,$sql);
+    }
+    if(isset($_POST['notfunny'])){
+        $sql= "UPDATE Jokes SET totalrated=$totalrated + 1 WHERE id= $id ";
         $result= mysqli_query($conn,$sql);
     }
     ?>

@@ -1,5 +1,6 @@
 <?php
 require 'authentication.php';
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -14,14 +15,22 @@ require 'authentication.php';
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<h1 class="mylog">Log in my funny jokes</h1>
-<div class="contener">
-    <div class="form"> 
-    <form action="" method="POST" class="b">
-        <input type="text" name = "user_email" placeholder = "Username/e-mail" class="block">
-        <input type="password" name = " user_pass" placeholder = "password" class="block">
-        <button class="submit" name="submit" id="log">login</button>
-    </form>
+    <div class="contener">
+        <div class="form"> 
+        <form action="" method="POST" class="b">
+                <h1 class="mylog">Log in my funny jokes</h1>
+                <p>
+                <label for="">Email</label>
+                <input type="text" name = "user_email" placeholder = "Username/e-mail" id="block1">
+                </p>
+                <p> 
+                <label for="">Password</label>
+                <input type="password" name = " user_pass" placeholder = "password" id="block">
+                </p>
+                <p>
+                <button class="submit" name="submit" id="log">login</button>
+                </p>
+        </form>
     </div>
 </div>
 </body>

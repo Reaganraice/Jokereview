@@ -4,47 +4,74 @@
     margin-top: 20px;
     
 }
-.contener{
-    border-radius: 10px;
-    height: 300px;
-    width: 400px;
-    background-color:#373F51;
-    margin-top: 30px;
-    margin-left: 35%;
-    padding-top: 200px;
-}
+
 body{
-    background-image: url(images/back.jpg);
+    background-color: white;
 }
- #log{
-    background-color:#E08E45;
-    margin :10px; 
-} 
+ 
 #out{
     float: right;
-    background-color: bisque;
-    font-size: 30px;
-    border-radius:20%;
+    font-size: 20px;
+    border-radius:5px;
+    padding: 5px;
+    margin: 5px;
+    color:   #71A9F7;
+    border: solid gray ;
 }
 #back{
-    float: right;
-    background-color: bisque;
-    font-size: 30px;
-    border-radius:20%;
+    font-size: 20px;
+    border-radius:5px;
+    padding: 5px;
+    margin: 5px;
+    color: #71A9F7;
+    border: solid gray ;
+
 }
 .fun{
     text-align: center;
-    font-size: 50px;
-    background-color: #E08E45;
+    font-size: 30px;
 }
-.mylog{
+.form{
+    background-color: #C6D8FF;
+    width: 40%;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: solid gray ;
+    
+
+}
+.rate{
+    background-color: #71A9F7;
+    width:30%;
+    margin: 100px auto;
+    color: white;
     text-align: center;
-    font-size: 50px;
-    background-color: #373F51;
-    color:white;
+    padding: 8px;
+    border-radius:5px;
+    border: solid gray;
+    
 }
+.block{
+    border: solid gray;
+    color: red;
+}
+#block{
+    border: solid gray;
+}
+#block1{
+    border: solid gray;
 
-
+}
+#log{
+    border: solid gray;
+}
+#funny{
+    border: solid gray;
+}
+#notfun{
+    border: solid gray;
+}
 
 
 

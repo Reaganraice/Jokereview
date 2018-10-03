@@ -7,7 +7,7 @@ $email = $_POST['user_email'];
 $password = md5($_POST['user_pass']);
 
 // CHECK FOR THE RECORD FROM TABLE
-$query = "SELECT * FROM users WHERE user_email='$email' and user_pass='$password'";
+$query = "SELECT * FROM users WHERE email='$email' and password='$password'";
 
 $result = mysqli_query($conn, $query) or die(mysqli_error($connection));
 $count = mysqli_num_rows($result);
@@ -17,7 +17,12 @@ if ($count == 1){
 
 }else{
 
-  echo "Invalid Login Credentials";
+  echo "<p>Invalid Login Credentials</p>";
 }
 }
 ?>
+<style>
+p{
+  text-align:center;
+}
+</style>

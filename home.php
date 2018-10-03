@@ -9,24 +9,24 @@
  <style>
  h2{
     text-align: center;
-     font-size:60px;
      margin-top:60px;
-     background-color: lightgrey;
  }
  body {
-   background-color:gray;
+   background-color:white;
  }
  .wrapper{
     display:grid;
-     grid-template-columns:48% 48%;
-    grid-gap:3em; 
+     grid-template-columns:49% 49%;
+    grid-gap:1em; 
      height:500px;
+     margin-left:10px;;
      
  }
  .wrapper> div{
-    background-color:#E6CCBE;
+    background-color:#71A9F7;
     padding:1em;
-    border-radius:20%;
+    border-radius:5px;
+    border: solid gray;
  }
 .wrapper> div:nth-child(old){
     background-color:#ddd;
@@ -39,6 +39,15 @@
 }
 h3{
     text-align:center;
+}
+h1 a{
+    color: white;
+    text-decoration-line:none;
+    border: solid gray;
+    padding:5px;
+    border-radius:5px;
+    background-color:gray;
+    
 }
  </style>
     <section class = "main-container">
