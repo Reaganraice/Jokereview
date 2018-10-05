@@ -9,7 +9,6 @@ if(isset($_POST['back'])){
     header('Location: home.php');
     
 } 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,9 +16,10 @@ if(isset($_POST['back'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
     <style>
-    body{
+    /* body{
         background-color: #F5F3F5;
         font-size:15px;
         color:#302B27;
@@ -37,7 +37,7 @@ if(isset($_POST['back'])){
     }
     .topblock{
         text-align: center;
-    }
+    } */
     </style>
 </head>
 <body>

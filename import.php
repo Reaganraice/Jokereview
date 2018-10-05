@@ -1,4 +1,5 @@
 <?php
+// connecting to the database
 require 'dbh.php';
 
 $arrContextOptions=array(
@@ -7,7 +8,7 @@ $arrContextOptions=array(
         "verify_peer_name"=>false,
     ),
    );
-
+// fetching jokes from the api
     $jokesToInsert = [];
     while(count($jokesToInsert) < 56) {
         $filename = "https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_joke";
@@ -23,7 +24,7 @@ $arrContextOptions=array(
     print_r($jokesToInsert);
     print '<pre>';
 
-
+// Insert into database
 foreach ($jokesToInsert as $joke) {
     $setup= $joke['setup'];
     $punchline = $joke['punchline'];
@@ -33,6 +34,7 @@ foreach ($jokesToInsert as $joke) {
     echo ($sql);
     print '<pre>';
 
+    //printing jokes from API 
     $result= mysqli_query($conn,$sql);
     print '<pre>';
     echo 'jokes data insert';

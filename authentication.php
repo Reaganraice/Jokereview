@@ -21,8 +21,5 @@ if ($count == 1){
 }
 }
 ?>
-<style>
-p{
-  text-align:center;
-}
-</style>
+<link rel="stylesheet" href="css/styles.css">
+

@@ -1,14 +1,18 @@
 <?php
+// connect to the database
     require 'dbh.php';
     $conn = mysqli_connect("localhost", "root", "root", "local");
     $sql = "SELECT * FROM Jokes order by RAND() LIMIT 1";
     $result = mysqli_query($conn,$sql);
+
+    // check if logout it set 
     if(isset($_POST['logout'])){
         session_unset();
         session_destroy();
         header('Location: index.php');
 
     }
+    // check if back it set
     if(isset($_POST['back'])){
         header('Location: home.php');
 
@@ -30,7 +34,9 @@
         <div class="rate">
             <h1> 
                 <?php
+                // counting number of rows
                 if($result->num_rows > 0) {
+                    //fetching data
                     while($row = $result->fetch_assoc()) {
                         $rating = $row['rating'];
                         $id = $row['id'];
@@ -55,6 +61,7 @@
     </section>
 
     <?php
+        // Updating rates if is funny
     if(isset($_POST['funny'])){
         $sql= "UPDATE Jokes SET rating=$rating + 1,totalrated=$totalrated + 1 WHERE id= $id ";
         $result= mysqli_query($conn,$sql);

@@ -1,4 +1,5 @@
 <?php
+// connecting to database
 $dbServername = "192.168.95.100:4047";
 $dbUsername = "root";
 $dbPassword = "root";
